@@ -1,13 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect, useState, useRef, useCallback } from 'react';
+import { useEffect, useState, useRef, useCallback, RefObject } from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
-import useInstance from '@use-it/instance/dist/instance';
+import useInstance from '@use-it/instance';
 import { MeasuringOptions, Dimensions } from "./interfaces";
 import getNodeRect from "./getNodeRect";
 
 type Measurer = () => void;
 
-function useMeasurer<T extends MeasuringOptions>(options: T[]): [{ [K in T]: Dimensions[K] }, React.RefObject<HTMLElement>, Measurer] {
+function useMeasurer<T extends MeasuringOptions>(options: T[]): [{ [K in T]: Dimensions[K] }, RefObject<HTMLElement>, Measurer] {
     const self = useInstance<{ animFrameID: number | never }>({});
     const [mesure, setMeasure] = useState<any>({});
     const node = useRef<HTMLElement>(null);
