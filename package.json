@@ -1,0 +1,35 @@
+{
+  "name": "use-measurer",
+  "version": "0.0.1",
+  "description": "Measure DOM nodes using a React Hook",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/egarciahz/useMeasurer.git"
+  },
+  "keywords": [
+    "react",
+    "measurer",
+    "dom-measurer",
+    "hook"
+  ],
+  "author": "Ezequiel Garcia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/egarciahz/useMeasurer/issues"
+  },
+  "homepage": "https://github.com/egarciahz/useMeasurer#readme",
+  "dependencies": {
+    "@use-it/instance": "^0.2.0",
+    "resize-observer-polyfill": "^1.5.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.23"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1"
+  }
+}
