@@ -24,15 +24,17 @@ function useMeasurer<T extends MeasuringOptions>(options: T[]): [{ [K in T]: Dim
     var observer: ResizeObserver | null = useInstance(new ResizeObserver(measurer));
 
     useEffect(() => {
-        if (node.current) {
-            observer?.unobserve(node.current);
-            observer?.observe(node.current);
+        if (node.current && observer) {
+            observer.unobserve(node.current);
+            observer.observe(node.current);
         }
 
         return () => {
             window.cancelAnimationFrame(self.animFrameID);
-            observer?.disconnect();
-            observer = null;
+            if (observer) {
+                observer.disconnect();
+                observer = null;
+            }
         }
     }, [node.current]);
 
