@@ -2,8 +2,13 @@
   "name": "use-measurer",
   "version": "0.0.1",
   "description": "Measure DOM nodes using a React Hook",
+  "source": "src/index.ts",
   "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "unpkg": "dist/index.umd.js",
   "scripts": {
+    "start": "microbundle watch",
+    "build": "microbundle",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,14 +27,36 @@
     "url": "https://github.com/egarciahz/useMeasurer/issues"
   },
   "homepage": "https://github.com/egarciahz/useMeasurer#readme",
+  "files": [
+    "src",
+    "dist"
+  ],
   "dependencies": {
     "@use-it/instance": "^0.2.0",
+    "react": "^16.13.1",
     "resize-observer-polyfill": "^1.5.1"
   },
   "devDependencies": {
-    "@types/react": "^16.9.23"
+    "@types/react": "^16.9.23",
+    "eslint": "^6.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "microbundle": "^0.11.0"
   },
   "peerDependencies": {
     "react": "^16.13.1"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    }
   }
 }
