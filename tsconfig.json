@@ -5,6 +5,7 @@
         "strict": true,
         "jsx": "react",
         "allowJs": true,
+        "noImplicitAny": false,
         "skipLibCheck": true,
         "importHelpers": true,
         "isolatedModules": true,
