@@ -1,7 +1,7 @@
 # useMeasurer 
 
 [![npm version](https://badge.fury.io/js/use-measurer.svg)](https://badge.fury.io/js/use-measurer)
-[![Dependency Status](https://david-dm.org/egarciahz/use-measurer.svg)](https://david-dm.org/egarciahz/use-measurer)
+[![dependencies Status](https://david-dm.org/egarciahz/useMeasurer/status.svg)](https://david-dm.org/egarciahz/useMeasurer)
 
 Measure DOM nodes using a React Hook.
 
