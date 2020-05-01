@@ -1,14 +1,15 @@
 {
   "name": "use-measurer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Measure DOM nodes using a React Hook",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/index.module.js",
   "unpkg": "dist/index.umd.js",
   "scripts": {
+    "lint": "eslint src",
     "start": "microbundle watch",
-    "build": "microbundle",
+    "build": "microbundle -o dist/ --sourcemap false --target web",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -33,19 +34,25 @@
   ],
   "dependencies": {
     "@use-it/instance": "^0.2.0",
-    "react": "^16.13.1",
     "resize-observer-polyfill": "^1.5.1"
   },
   "devDependencies": {
     "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
     "eslint": "^6.1.0",
     "eslint-plugin-react": "^7.14.3",
-    "microbundle": "^0.11.0"
+    "eslint-plugin-react-hooks": "^3.0.0",
+    "microbundle": "^0.11.0",
+    "rimraf": "^3.0.2"
   },
   "peerDependencies": {
-    "react": "^16.13.1"
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
   },
   "eslintConfig": {
+    "extends": [
+      "plugin:react-hooks/recommended"
+    ],
     "env": {
       "browser": true,
       "es6": true
