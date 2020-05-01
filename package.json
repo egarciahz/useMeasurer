@@ -1,6 +1,6 @@
 {
   "name": "use-measurer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Measure DOM nodes using a React Hook",
   "source": "src/index.ts",
   "main": "dist/index.js",
