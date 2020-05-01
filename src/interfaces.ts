@@ -21,3 +21,6 @@ export interface Dimensions {
 
 export type MeasuringOptions = keyof Dimensions;
 
+export interface Measurer {
+    (): void
+}
