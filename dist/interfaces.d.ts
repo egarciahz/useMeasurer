@@ -17,3 +17,6 @@ export interface Dimensions {
     };
 }
 export declare type MeasuringOptions = keyof Dimensions;
+export interface Measurer {
+    (): void;
+}
