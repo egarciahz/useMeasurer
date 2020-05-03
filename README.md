@@ -6,22 +6,30 @@
 Measure DOM nodes using a React Hook.
 
 ## Install
-__________
+
 `npm install use-measurer --save`
 
 
-## useMeasure
-_____________
+## useMeasurer
+
 **useMeasure** receives a key array with the following possible options.
+
+The first value returned by the hook is an object, here are the measured properties.
+
 
 Example
 
-`useMeasure(["client", "margin", ...])`
+``` javascript
+const [measuring, ...] = useMeasure(["client", "margin", ...]);
+const { client, margin } = measuring;
+
+```
+> Note: the initial value of the measurements is an empty object
 
 
 #### `client`
 
-Adds the following to `contentRect.client` returned in the child function.
+Adds the following to `client` returned in the first value of the array.
 
 [clientTop](https://developer.mozilla.org/en-US/docs/Web/API/Element/clientTop),
 [clientLeft](https://developer.mozilla.org/en-US/docs/Web/API/Element/clientLeft),
@@ -31,7 +39,7 @@ and
 
 #### `offset`
 
-Adds the following to `contentRect.offset` returned in the child function.
+Adds the following to `offset` returned in the first value of the array.
 
 [offsetTop](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop),
 [offsetLeft](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetLeft),
@@ -41,7 +49,7 @@ and
 
 #### `scroll`
 
-Adds the following to `contentRect.scroll` returned in the child function.
+Adds the following to `scroll` returned in the first value of the array.
 
 [scrollTop](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTop),
 [scrollLeft](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollLeft),
@@ -53,15 +61,13 @@ and
 
 Uses
 [getBoundingClientRect](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
-to calculate the element rect and add it to `contentRect.bounds` returned in the
-child function.
+to calculate the element rect and add it to `bounds` returned in the first value of the array.
 
 #### `margin`
 
 Uses
 [getComputedStyle](https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle)
-to calculate margins and add it to `contentRect.margin` returned in the child
-function.
+to calculate margins and add it to `margin` returned in the first value of the array.
 
 ### Example
 
@@ -70,7 +76,7 @@ import React from "react";
 import useMeasurer from "use-measurer";
 
 function MyComponent(){
-    const [measuring, nodeRef, forceMeasure] = useMeasurer(["client","margin"]);
+    const [measuring, nodeRef, forceMeasurementFn] = useMeasurer(["client","margin"]);
 
 
     return (
