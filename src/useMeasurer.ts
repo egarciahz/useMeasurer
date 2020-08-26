@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef, useCallback, RefObject } from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
-import useInstance from '@use-it/instance/dist/instance';
+import useInstance from '@use-it/instance';
 import { MeasuringOptions, Dimensions, Measurer } from "./interfaces";
 import getNodeRect from "./getNodeRect";
 
