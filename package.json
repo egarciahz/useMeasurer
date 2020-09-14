@@ -28,6 +28,7 @@
     "url": "https://github.com/egarciahz/useMeasurer/issues"
   },
   "homepage": "https://github.com/egarciahz/useMeasurer#readme",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "files": [
     "src",
     "dist"
