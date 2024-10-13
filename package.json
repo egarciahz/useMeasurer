@@ -38,18 +38,18 @@
     "resize-observer-polyfill": "^1.5.1"
   },
   "devDependencies": {
-    "@types/react": "^16.9.23",
-    "@types/react-dom": "^16.9.5",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
     "eslint": "^6.1.0",
     "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-react-hooks": "^3.0.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
     "microbundle": "^0.11.0",
     "rimraf": "^3.0.2",
     "serialize-javascript": "^4.0.0"
   },
   "peerDependencies": {
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0"
+    "react": "^16.13.0 || ^18.0.0",
+    "react-dom": "^16.13.0 || ^18.0.0"
   },
   "eslintConfig": {
     "extends": [
